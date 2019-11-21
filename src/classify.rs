@@ -7,7 +7,7 @@ use csv::Error;
 use crate::utils::*;
 use std::io;
 
-pub fn classify(text_file: &str, content_dir: &str) -> Result<(), Error>{
+pub fn classify(content_dir: &str, text_file: &str) -> Result<(), Error>{
     println!("CLASSIFYING...");
 
     let class_word_count = make_class_word_count(content_dir).unwrap();
@@ -83,7 +83,7 @@ fn make_reviews_count_by_class(content_dir: &str) -> Result<Vec<usize>, io::Erro
 }
 
 fn make_classifying_text(content_dir: &str, text_file: &str) -> Result<HashMap<String, usize>, io::Error>{
-    let text= read_text([content_dir, text_file].concat());
+    let text= read_text([content_dir, "/", text_file].concat());
     let result = compile_regex(text.as_str());
     let words = result.split_whitespace();
 
