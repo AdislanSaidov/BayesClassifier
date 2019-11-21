@@ -116,7 +116,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cargo Command.classify with positive">
+  <component name="RunManager" selected="Cargo Command.classify with negative">
     <configuration name="classify with negative" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="run --bin bayes-classifier-in-rust -- -c /negative_text.txt $USER_HOME$/content" />
